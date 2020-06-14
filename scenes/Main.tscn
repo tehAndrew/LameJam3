@@ -1,7 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Levels/Level1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://resource/bg/white.png" type="Texture" id=2]
+[ext_resource path="res://shaders/pallette.shader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 3 )
 
 [node name="Main" type="Node2D"]
 
 [node name="Level1" parent="." instance=ExtResource( 1 )]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource( 1 )
+margin_right = 512.0
+margin_bottom = 480.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

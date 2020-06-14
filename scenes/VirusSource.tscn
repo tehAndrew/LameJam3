@@ -24,6 +24,7 @@ shape = SubResource( 1 )
 [node name="GenTimer" type="Timer" parent="."]
 
 [node name="NeighborArea" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NeighborArea"]
 position = Vector2( 16, 16 )

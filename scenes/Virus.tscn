@@ -4,10 +4,10 @@
 [ext_resource path="res://scripts/Virus.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 8 )
+extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16, 16 )
+extents = Vector2( 32, 32 )
 
 [node name="Virus" type="Area2D"]
 script = ExtResource( 2 )
@@ -18,7 +18,7 @@ centered = false
 hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 8, 8 )
+position = Vector2( 16, 16 )
 shape = SubResource( 1 )
 
 [node name="UpdateTimer" type="Timer" parent="."]
@@ -28,7 +28,7 @@ shape = SubResource( 1 )
 [node name="NeighborArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NeighborArea"]
-position = Vector2( 8, 8 )
+position = Vector2( 16, 16 )
 shape = SubResource( 2 )
 [connection signal="timeout" from="UpdateTimer" to="." method="_on_updateTimer_timeout"]
 [connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldownTimer_timeout"]
